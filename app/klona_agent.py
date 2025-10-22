@@ -53,38 +53,8 @@ knowledge = Knowledge(
     vector_db=vector_db,
 )
 
-# Processar PDFs automaticamente
-print("📄 Processando PDFs da pasta docs...")
-docs_path = Path("../docs")
-
-if docs_path.exists():
-    pdf_files = list(docs_path.glob("*.pdf"))
-    if pdf_files:
-        print(f"📚 Encontrados {len(pdf_files)} arquivos PDF")
-        
-        for pdf_file in pdf_files:
-            print(f"📄 Processando: {pdf_file.name}")
-            try:
-                knowledge.add_content(
-                    path=str(pdf_file),
-                    name=pdf_file.stem,
-                    description=f"Documento PDF: {pdf_file.stem}",
-                    metadata={
-                        "tipo": "pdf",
-                        "categoria": "documento",
-                        "arquivo": pdf_file.name,
-                        "processado": "sim"
-                    }
-                )
-                print(f"✅ {pdf_file.name} processado!")
-            except Exception as e:
-                print(f"❌ Erro ao processar {pdf_file.name}: {e}")
-        
-        print(f"🎯 {len(pdf_files)} PDFs processados com sucesso!")
-    else:
-        print("❌ Nenhum arquivo PDF encontrado na pasta 'docs'")
-else:
-    print("❌ Pasta 'docs' não encontrada")
+# PDFs serão processados separadamente
+print("📄 PDFs devem ser processados com: python process_pdfs.py")
 
 print("✅ Base de conhecimento configurada!")
 

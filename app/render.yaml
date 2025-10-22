@@ -4,7 +4,7 @@ services:
     env: python
     plan: starter
     buildCommand: pip install -r requirements.txt
-    startCommand: python klona_agent.py
+    startCommand: python start_agent.py
     envVars:
       - key: MISTRAL_API_KEY
         sync: false

@@ -23,4 +23,4 @@ RUN mkdir -p docs
 EXPOSE 8000
 
 # Comando de inicialização
-CMD ["python", "klona_agent.py"]
+CMD ["python", "start_agent.py"]
