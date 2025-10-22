@@ -19,7 +19,7 @@ if sys.platform == "win32":
 app = Flask(__name__)
 
 # Configurações
-NIARA_API_URL = os.getenv("NIARA_API_URL", "http://localhost:8000")
+NIARA_API_URL = os.getenv("NIARA_API_URL", "https://assistente-niara.onrender.com")
 RESPONSE_WEBHOOK_URL = "https://webhook.fiqon.app/webhook/a02bb210-fabb-4bcf-9976-601014ae05af/05e23f61-0a62-48da-b7c1-a31507aab6a2"
 AGENT_NAME = "assistente-niara"
 

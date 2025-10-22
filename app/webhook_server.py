@@ -22,7 +22,7 @@ RESPONSE_WEBHOOK_URL = "https://webhook.fiqon.app/webhook/a02bb210-fabb-4bcf-997
 
 class NiaraWebhookServer:
     def __init__(self):
-        self.niara_api = os.getenv("NIARA_API_URL", "http://localhost:8000")
+        self.niara_api = os.getenv("NIARA_API_URL", "https://assistente-niara.onrender.com")
         self.agent_name = "assistente-niara"
         
     def send_to_niara(self, message, user_id=None, metadata=None):
